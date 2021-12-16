@@ -1,2 +1,6 @@
-тут будет страница с кошачьим контентом
-<!-- Использовать сегодня ngIf, ngFor, ngModel, обработку событий -->
+<div class="profile-content">
+    <div class="profile-content__article" *ngFor="let article of articles">
+        <h3>{{article.title}}</h3>
+        {{article.text}}
+    </div>
+</div>

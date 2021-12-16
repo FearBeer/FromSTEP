@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-interface Post {
+interface Article {
   title: string
   text: string
 }
@@ -10,11 +10,11 @@ interface Post {
   templateUrl: './profile-content.component.html',
   styleUrls: ['./profile-content.component.sass']
 })
-export class ProfileContentComponent implements OnInit {
+export class ProfileContentComponent {
 
-  posts: Post[]
+  articles: Article[]
   constructor() {
-    this.posts = [
+    this.articles = [
       {
         title: 'Всем привет!',
         text: 'Я зарегистрировался в котограмме'
@@ -25,8 +25,4 @@ export class ProfileContentComponent implements OnInit {
       },
     ]
   }
-
-  ngOnInit() {
-  }
-
 }
