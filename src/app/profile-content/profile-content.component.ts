@@ -13,6 +13,7 @@ interface Article {
 export class ProfileContentComponent {
 
   articles: Article[]
+
   constructor() {
     this.articles = [
       {
@@ -22,7 +23,18 @@ export class ProfileContentComponent {
       {
         title: 'Кошачьи мысли',
         text: 'Куда человек уходит каждое утро?'
-      },
+      },      
     ]
+  }
+
+  addArticle(event : any) {
+    event.preventDefault()
+    let title = event.target.title.value
+    let text = event.target.text.value
+
+    this.articles.push({
+      title,
+      text
+    })
   }
 }
